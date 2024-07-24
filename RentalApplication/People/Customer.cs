@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace RentalApplication.Customers
+namespace RentalApplication.People
 {
-    public class Customer
+    public class Customer : Person
     {
-        public string Name { get; set; }
         public List<Building> RentedBuildings { get; set; }
-        public Customer(string Name)
+        public Customer(string Name) : base(Name)
         {
-            this.Name = Name;
             RentedBuildings = new List<Building>();
         }
         public void RentBuilding(Building building)
